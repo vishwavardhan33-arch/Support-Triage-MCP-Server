@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 130
+
+[tool.ruff.lint]
+# Keep this to the practically useful defaults: pyflakes (F) for real bugs
+# (unused imports/vars, undefined names) and pycodestyle errors (E) for
+# actual style problems. Skip the more opinionated modernization/lint
+# categories (UP, DTZ, RUF100, etc.) for a small project like this.
+select = ["E", "F"]

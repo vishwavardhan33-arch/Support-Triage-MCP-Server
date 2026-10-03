@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support triage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">&sect;</span>
+      <h1>Support triage</h1>
+    </div>
+    <div class="ollama-status" id="ollamaStatus">
+      <span class="dot" id="ollamaDot"></span>
+      <span id="ollamaLabel">Checking model&hellip;</span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="rail">
+      <nav class="tabs" id="statusTabs">
+        <button class="tab active" data-status="">All</button>
+        <button class="tab" data-status="open">Open</button>
+        <button class="tab" data-status="in_progress">In progress</button>
+        <button class="tab" data-status="closed">Closed</button>
+      </nav>
+
+      <div class="rail-section">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="">All categories</option>
+        </select>
+      </div>
+
+      <div class="rail-section rail-count">
+        <span id="ticketCount">0</span> tickets
+      </div>
+    </aside>
+
+    <main class="ledger">
+      <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Subject</th>
+            <th>Sender</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Received</th>
+          </tr>
+        </thead>
+        <tbody id="ticketRows"></tbody>
+      </table>
+      <p class="empty" id="emptyState" hidden>No tickets match this filter.</p>
+    </main>
+
+    <aside class="case-panel">
+      <div class="case-panel-inner" id="casePanelInner">
+        <p class="case-placeholder">Select a ticket to open its case file.</p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
