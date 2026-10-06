@@ -1,5 +1,5 @@
 # Support Triage MCP
-
+[![M8ven Score](https://m8ven.ai/badge/mcp/vishwavardhan33-arch/support-triage-mcp-server)](https://m8ven.ai/mcp/vishwavardhan33-arch/support-triage-mcp-server?s=readme)
 An MCP (Model Context Protocol) server that exposes a support-ticket inbox as
 tools an AI client can use to list, inspect, triage, and update tickets.
 The dataset here is mocked (styled after a home-loan partner-support inbox:
